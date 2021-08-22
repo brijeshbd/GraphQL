@@ -8,7 +8,9 @@ const rvalues = require('./graphql/resolver/index');
 const bodyParser = require('body-parser');
 const isAuth = require('./middleware/is-auth');
 const port = process.env.PORT || 3000;
+const cors = require('cors');
 
+app.use(cors);
 // app.use(bodyParser.json());
 app.use(isAuth);
 
